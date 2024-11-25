@@ -1,0 +1,61 @@
+/* General Styles for the Body Element */
+body {
+    background-color: #f8f9fa;
+    /* Sets a light gray background color for the entire page */
+    color: #333;
+    /* Sets the default text color to dark gray */
+}
+
+/* Styles for the Hero Sections */
+.hero {
+    padding: 50px 0;
+    /* Adds 50 pixels of padding to the top and bottom of the hero sections */
+}
+
+/* Styles for Titles within Hero Sections */
+.hero .title {
+    color: #d90429;
+    /* Sets the text color of titles inside hero sections to a specific shade of red */
+}
+
+/* Styles for Card Components */
+.card {
+    border: none;
+    /* Removes the default border around cards */
+    transition: transform 0.3s ease;
+    /* Adds a smooth transition effect for transformations over 0.3 seconds */
+    /* The transition property makes the transform effect (like scaling) happen smoothly */
+}
+
+/* Hover Effect for Cards */
+.card:hover {
+    transform: scale(1.05);
+    /* Scales up the card slightly when hovered over */
+    /* The transform property scales the card to 105% of its original size */
+}
+
+/* Styles for Images inside Cards */
+.card img {
+    border-radius: 50%;
+    /* Makes the image circular by setting the border radius to 50% */
+    width: 100px;
+    /* Sets the width of the image to 100 pixels */
+    height: 100px;
+    /* Sets the height of the image to 100 pixels */
+    object-fit: cover;
+    /* Ensures the image covers the entire container without stretching or squishing */
+    margin: 0 auto;
+    /* Centers the image horizontally within its container */
+    /* The object-fit property makes the image maintain its aspect ratio while filling the container */
+}
+
+/* Styles for Images inside News Cards */
+.news-card img {
+    width: 100%;
+    /* Makes the image take up the full width of its container */
+    height: 150px;
+    /* Sets the height of the image to 150 pixels */
+    object-fit: cover;
+    /* Ensures the image covers the container area without distortion */
+    /* This creates a consistent size for all news card images */
+}
