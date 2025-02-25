@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
-/* ===================================================
-   General Styles for the Body Element
-   =================================================== */
+/* ---------------------------------------------------
+   GLOBAL STYLES & TYPOGRAPHY
+--------------------------------------------------- */
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -12,13 +12,8 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     font-weight: 400;
-    /* Medium weight for better readability */
 }
 
-/* ===================================================
-   Typography
-   =================================================== */
-/* Headings */
 h1,
 h2,
 h3,
@@ -26,15 +21,12 @@ h4,
 h5,
 h6,
 .title {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    /* Semi-bold for emphasis */
     color: #333;
     line-height: 1.3;
     margin: 1em 0 0.5em;
 }
 
-/* Paragraphs and Text */
 p,
 .small,
 .text-muted {
@@ -43,9 +35,9 @@ p,
     margin: 0 0 1em;
 }
 
-/* ===================================================
-   Navbar Styling
-   =================================================== */
+/* ---------------------------------------------------
+   NAVBAR & HEADER BAR
+--------------------------------------------------- */
 .navbar {
     background-color: #991c2d;
     /* SBCC Red */
@@ -57,7 +49,6 @@ p,
     color: #fff;
     text-decoration: none;
     font-weight: 300;
-    /* Light weight */
     padding: 0.75rem 1rem;
     display: inline-block;
     transition: color 0.3s ease, text-decoration 0.3s ease;
@@ -66,20 +57,16 @@ p,
 .navbar a:hover,
 .navbar a:focus {
     color: #d90429;
-    /* Lighter Red on Hover */
     text-decoration: underline;
 }
 
 .navbar .nav-link.active {
     text-decoration: underline;
     color: #d90429 !important;
-    /* Distinct color to indicate active page */
 }
 
-/* Dropdown Menu Styling */
 .navbar .dropdown-menu {
     background-color: #991c2d;
-    /* SBCC Red */
 }
 
 .navbar .dropdown-item {
@@ -91,42 +78,60 @@ p,
 .navbar .dropdown-item:hover,
 .navbar .dropdown-item:focus {
     background-color: #d90429;
-    /* Lighter Red on Hover */
     color: #fff;
 }
 
-/* ===================================================
-   Navbar Link Font Size Adjustment
-   =================================================== */
-
-/* Increase font size for navbar links */
 .navbar .nav-link {
     font-size: 1.1rem;
-    /* Adjust this value as needed */
 }
 
-/* ===================================================
-   Custom Text Color Classes
-   =================================================== */
-/* Custom SBCC Red Text Color */
-.text-sbcc-red {
-    color: #991c2d !important;
-    /* SBCC Red */
+/* Mobile Navbar Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .navbar .dropdown-menu {
+        font-size: 0.9rem;
+    }
 }
 
-/* Class Resources Header Styling */
-.class-resources-header {
-    color: #000 !important;
-    /* Black Color */
+/* Header Bar (Above Navbar) */
+.header-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    height: 30px;
+    padding: 0 20px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-/* ===================================================
-   Hero Sections
-   =================================================== */
+.header-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.header-text {
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* ---------------------------------------------------
+   HERO SECTIONS
+--------------------------------------------------- */
 .hero {
     padding: 60px 0;
     background-color: #f8f9fa;
-    /* Light Gray Background */
 }
 
 .hero .title {
@@ -134,10 +139,8 @@ p,
     font-size: 35px;
 }
 
-/* YouTube Hero Section */
 .youtube-hero {
     background-color: #343a40;
-    /* Dark Gray */
 }
 
 .youtube-hero .title,
@@ -146,54 +149,82 @@ p,
 .youtube-hero a,
 .youtube-hero li {
     color: #fff !important;
-    /* White Text */
 }
 
-/* ===================================================
-   Profile Card Styling
-   =================================================== */
+.hero-section {
+    background-color: #991c2d;
+    color: #fff;
+}
+
+.hero-section a {
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.hero-section h3,
+.hero-section p {
+    color: #fff !important;
+}
+
+.hero-section .icon-square svg {
+    fill: #fff;
+}
+
+/* ---------------------------------------------------
+   PROFILE CARD & IMAGE FRAMING
+--------------------------------------------------- */
 .profile-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* Default on mobile */
 }
 
 @media (min-width: 768px) {
     .profile-card {
         flex-direction: row;
-        align-items: flex-start;
-        /* CHANGED from 'space-between' to 'flex-start' to reduce the gap */
-        justify-content: flex-start;
     }
 }
 
-/* Profile Image Styling */
 .profile-img {
     width: 200px;
     height: auto;
     object-fit: cover;
     border-radius: 8px;
-    /* Slight Rounding */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Subtle Shadow */
 }
 
-/* Ensure profile images scale appropriately */
 .profile-image img {
     max-width: 100%;
     height: auto;
 }
 
-/* ===================================================
-   Carousel Styling
-   =================================================== */
+/* Fixed Square Frame for Profile Image */
+.profile-img-frame {
+    width: 250px;
+    height: 250px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.profile-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---------------------------------------------------
+   CAROUSEL
+--------------------------------------------------- */
 .carousel-item img {
     width: 100%;
     height: 600px;
     object-fit: cover;
-    /* Diagonal Line Overlays */
     position: relative;
 }
 
@@ -205,11 +236,7 @@ p,
     pointer-events: none;
     width: 50%;
     height: 50%;
-    background-image: repeating-linear-gradient(45deg,
-            rgba(255, 255, 255, 0.8) 0,
-            rgba(255, 255, 255, 0.8) 2px,
-            transparent 2px,
-            transparent 6px);
+    background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0.8) 2px, transparent 2px, transparent 6px);
     background-size: 6px 6px;
     opacity: 0.2;
 }
@@ -226,10 +253,21 @@ p,
     clip-path: polygon(100% 100%, 100% 0, 0 100%);
 }
 
-/* ===================================================
-   Card Components
-   =================================================== */
-/* General Card Styling */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item img {
+        height: 300px;
+    }
+}
+
+/* ---------------------------------------------------
+   CARD COMPONENTS (NEWS CARD, etc.)
+--------------------------------------------------- */
 .card {
     border: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -240,7 +278,7 @@ p,
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* News Card Styling */
+/* News Card */
 .news-card {
     width: 300px;
     height: 325px;
@@ -318,20 +356,17 @@ p,
     color: #ab4b38;
 }
 
-/* Class Resources Links Styling */
+/* ---------------------------------------------------
+   CLASS RESOURCES LINKS & UNDERLINED TITLE
+--------------------------------------------------- */
 .class-resources a {
     color: #991c2d;
-    /* SBCC Red */
 }
 
 .class-resources a:hover {
     color: #d90429;
-    /* Lighter Red on Hover */
 }
 
-/* ===================================================
-   Underlined Title Animation
-   =================================================== */
 .underlined-title {
     position: relative;
     display: inline-block;
@@ -353,11 +388,15 @@ p,
     width: 100%;
 }
 
-/* ===================================================
-   Footer Styling
-   =================================================== */
+/* ---------------------------------------------------
+   FOOTER
+--------------------------------------------------- */
 .footer {
-    background-color: #f8f9fa;
+    background-color: #991c2d;
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
 }
 
 .footer .nav-link {
@@ -373,10 +412,26 @@ p,
     color: #6c757d;
 }
 
-/* ===================================================
-   Responsive Design
-   =================================================== */
-/* News Grid Responsive */
+.footer img {
+    max-height: 60px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .nav {
+    gap: 1rem;
+}
+
+/* ---------------------------------------------------
+   NEWS GRID & SCHEDULE TABLE (RESPONSIVE)
+--------------------------------------------------- */
 .news-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -398,7 +453,6 @@ p,
     }
 }
 
-/* Schedule Table Responsive */
 .schedule-table {
     background-color: #f8f9fa;
     border-radius: 12px;
@@ -412,7 +466,6 @@ p,
 
 .schedule-table .class-block {
     background-color: #991c2d;
-    /* SBCC Red */
     color: white;
     padding: 10px;
     border-radius: 8px;
@@ -423,7 +476,6 @@ p,
 
 .schedule-table .class-block.bg-light-red {
     background-color: #d90429;
-    /* Lighter Red */
 }
 
 @media (max-width: 768px) {
@@ -437,21 +489,11 @@ p,
     }
 }
 
-/* ===================================================
-   Additional Custom Styles
-   =================================================== */
-/* Custom Header Bar */
-#block-header-bar {
-    background-color: #333;
-    height: 30px;
-    padding: 0 20px;
-    font-size: 0.9rem;
-}
-
-/* Ensuring consistency in link colors across the site */
+/* ---------------------------------------------------
+   LINK OVERRIDES
+--------------------------------------------------- */
 a {
     color: #991c2d;
-    /* SBCC Red */
     text-decoration: none;
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
@@ -459,17 +501,10 @@ a {
 a:hover,
 a:focus {
     color: #d90429;
-    /* Lighter Red on Hover */
     text-decoration: underline;
 }
 
-/* Ensuring profile images are not distorted */
-.profile-image img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Additional Classes to Avoid Redundancy */
+/* Navbar Link Overrides (for dark theme) */
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.8);
 }
@@ -479,142 +514,18 @@ a:focus {
     color: #fff;
 }
 
-/* ===================================================
-   Media Queries for Enhanced Responsiveness
-   =================================================== */
-@media (max-width: 768px) {
-
-    /* Adjust carousel image height on smaller screens */
-    .carousel-item img {
-        height: 400px;
-    }
-}
-
-@media (max-width: 576px) {
-
-    /* Adjust carousel image height on very small screens */
-    .carousel-item img {
-        height: 300px;
-    }
-}
-
-/* ===================================================
-   Override Bootstrap Defaults if Necessary
-   =================================================== */
-/* Example: Adjusting navbar-brand image size */
-.navbar-brand img {
-    width: 80px;
-    height: auto;
-}
-
-/* Ensure dropdown menus are correctly aligned */
-.navbar .dropdown-menu {
-    min-width: 200px;
-}
-
-/* Ensure the footer links are spaced out evenly */
-.footer .nav {
-    gap: 1rem;
-}
-
-/* ===================================================
-   Hero Section Styling
-   =================================================== */
-.hero-section {
-    background-color: #991c2d;
-    /* SBCC Red Background */
-    color: #fff;
-    /* Set default text color to white */
-}
-
-.hero-section a {
-    color: #fff !important;
-    /* Ensure links are white */
-}
-
-.hero-section h3,
-.hero-section p {
-    color: #fff !important;
-    /* Ensure headings and paragraphs are white */
-}
-
-/* Optional: Remove pointer cursor for links if you want them to appear non-clickable */
-.hero-section a {
-    cursor: pointer;
-    /* Change to 'default' if you want them to appear non-clickable */
-}
-
-/* Ensure SVG icons inherit the white color */
-.hero-section .icon-square svg {
-    fill: #fff;
-    /* Set SVG fill to white */
-}
-
-/* Remove white space below the footer */
-html,
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-/* General footer styling */
-.footer {
-    background-color: #991c2d;
-    color: white;
-    width: 100%;
-    padding: 20px 0;
-    /* Adds vertical padding for a larger footer */
-    text-align: center;
-    /* Centers text content */
-}
-
-.footer footer {
-    padding: 20px 0;
-    /* Adds more padding inside the footer element */
-}
-
-.footer img {
-    max-height: 60px;
-    /* Ensures the logo is visible but not overwhelming */
-}
-
-.footer a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-/* Default Light Mode Styles */
-body {
-    background-color: #f8f9fa;
-    color: #333;
-}
-
-.navbar {
-    background-color: #991c2d;
-}
-
-.footer {
-    background-color: #991c2d;
-    color: white;
-}
-
-/* Mike Young Hero Section with Blurred Background */
+/* ---------------------------------------------------
+   MIKE YOUNG HERO SECTION (BLURRED BACKGROUND)
+--------------------------------------------------- */
 .mike-young-hero {
     position: relative;
     min-height: 600px;
-    /* Adjust height as needed */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
 }
 
-/* Background Image */
 .mike-young-hero::before {
     content: "";
     position: absolute;
@@ -624,12 +535,9 @@ body {
     height: 100%;
     background: url('./Images/YoungsBG.pn') no-repeat center center / cover;
     filter: blur(5px) brightness(0.8);
-    /* Apply blur and lighten */
     z-index: -2;
-    /* Place behind all other elements */
 }
 
-/* Fade-Out Gradient */
 .mike-young-hero::after {
     content: "";
     position: absolute;
@@ -639,34 +547,28 @@ body {
     height: 100%;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, white 100%);
     z-index: -1;
-    /* Place above the blurred background */
 }
 
-/* Content Styling */
 .mike-young-hero .profile-card {
     position: relative;
     z-index: 1;
-    /* Ensure content appears above the background and gradient */
     background-color: #ffffff;
-    /* Explicitly set background to white */
     border-radius: 10px;
-    /* Optional: keep corners rounded */
 }
 
-/* Image won't shrink */
 .profile-image {
     flex-shrink: 0;
-    /* no shrinking */
 }
 
-/* Optionally fix the image width if you like */
 .profile-img {
     width: 200px;
     height: auto;
     object-fit: cover;
 }
 
-/* .btn-53 from Uiverse.io, adapted for SBCC Red hover, smaller size, white hover text */
+/* ---------------------------------------------------
+   BTN-53 (CUSTOM BUTTON) STYLING
+--------------------------------------------------- */
 .btn-53,
 .btn-53 *,
 .btn-53 :after,
@@ -680,12 +582,10 @@ body {
 .btn-53 {
     -webkit-tap-highlight-color: transparent;
     -webkit-appearance: button;
-    /* Default: black background */
     background-color: #000;
     color: #fff;
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
-    /* or your preferred font */
     font-size: 0.875rem;
     line-height: 1.5;
     margin: 0;
@@ -694,14 +594,11 @@ body {
     text-decoration: none;
     display: inline-block;
     transition: background-color 0.2s ease;
-
-    /* Smaller button size */
     border: 1px solid;
     border-radius: 999px;
     font-weight: 900;
     overflow: hidden;
     padding: 0.5rem 1.25rem;
-    /* <--- decreased from 1rem 2rem */
     position: relative;
     text-transform: uppercase;
 }
@@ -710,7 +607,6 @@ body {
     cursor: default;
 }
 
-/* The white overlay that slides away on hover */
 .btn-53 .original {
     background: #fff;
     color: #000;
@@ -718,7 +614,6 @@ body {
     place-content: center;
     position: absolute;
     inset: 0;
-    /* Fill the parent */
     transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
 }
 
@@ -726,30 +621,21 @@ body {
     transform: translateY(100%);
 }
 
-/* The "letters" that appear from behind the overlay */
 .btn-53 .letters {
     display: inline-flex;
 }
 
-/* 
-  - Make each span start off hidden & positioned
-  - Then fade/slide in on hover 
-  - color: #fff ensures white text 
-*/
 .btn-53 span {
     opacity: 0;
     transform: translateY(-15px);
     transition: transform 0.2s, opacity 0.2s;
     color: #fff;
-    /* <--- ensure text is white */
 }
 
-/* Even-indexed letters tilt the other way initially */
 .btn-53 span:nth-child(2n) {
     transform: translateY(15px);
 }
 
-/* Reveal each letter in sequence on hover */
 .btn-53:hover span {
     opacity: 1;
     transform: translateY(0);
@@ -775,77 +661,43 @@ body {
     transition-delay: 0.5s;
 }
 
-/* ... add more lines if your word is longer */
-
-/* On hover, reveal SBCC Red background */
 .btn-53:hover {
     background-color: #991c2d !important;
-    /* SBCC Red */
 }
 
-/* 
-  .card-trace 
-  -------------
-  1) Positions the card so we can place a pseudo-element on top.
-  2) Hides the default border (we’re using the pseudo-element instead).
-*/
-.card-trace {
+.resources-hero {
     position: relative;
-    border: 0;
-    /* in case some cards had a border */
-    overflow: visible;
-    /* ensure the pseudo-element is visible outside if needed */
+    height: 400px;
+    /* Adjust height as needed */
+    overflow: hidden;
 }
 
-/* 
-   Pseudo-element will “draw” an outline around the card 
-   when hovered. 
-*/
-.card-trace::before {
-    content: "";
+.resources-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resources-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    /* Start with 0 width/height => invisible border */
-    width: 0;
-    height: 0;
-    /* The outline’s style and color: SBCC Red (#991c2d), 2px thickness */
-    border: 2px solid #991c2d;
-    /* Match card’s border-radius if desired */
-    border-radius: 0.25rem;
-    /* or whatever your card's radius is */
-
-    box-sizing: border-box;
-    pointer-events: none;
-    /* ensures it doesn’t block clicks */
+    width: 100%;
+    height: 100%;
+    /* Dark tint for contrast */
+    /* Use flex to stretch the container, but let the inner container dictate text position */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-/* 
-   Animate the pseudo-element from 0 → 100% 
-   on hover using a keyframes animation.
-*/
-.card-trace:hover::before {
-    animation: trace-outline 0.6s forwards ease-in-out;
+.resources-overlay .container {
+    padding-top: 40px;
 }
 
-/* 
-   Keyframes for the “draw” effect:
-   - First expands the width to 100% 
-   - Then expands the height to 100%
-*/
-@keyframes trace-outline {
-    0% {
-        width: 0;
-        height: 0;
-    }
-
-    50% {
-        width: 100%;
-        height: 0;
-    }
-
-    100% {
-        width: 100%;
-        height: 100%;
-    }
+.resources-text .title {
+    color: #fff;
+    font-size: 2rem;
+    /* Match your other hero titles */
+    margin-bottom: 0.5rem;
 }
