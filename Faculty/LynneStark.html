@@ -10,75 +10,65 @@
 </head>
 
 <body>
-    <header>
-        <div id="block-header-bar" class="d-flex align-items-center justify-content-center bg-dark py-1 px-3">
-            <!-- Logo or Image -->
-            <a href="/" class="d-flex align-items-center text-decoration-none">
-                <img src="../Images/sbcclogononame.png" alt="SBCC Logo" class="d-none d-md-block me-2"
-                    style="height: 0px;">
-                <span class="text-light fw-bold">Department of Physics & Engineering</span>
-            </a>
-        </div>
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-red shadow-sm py-3 border border-black">
-            <div class="container">
-                <div class="d-flex align-items-center navbar-brand">
-                    <img src="../Images/SBCCLogoWhite.png" alt="Logo" class="me-2" style="height: 80px;">
-                    <div class="vr bg-black mx-2"></div>
-                    <div>
-                        <span class="d-block fw-bold text-uppercase" style="font-size: 20px;">Santa Barbara City
-                            College</span>
-                        <span class="d-block" style="font-size: 37px;">Physics & Engineering</span>
-                    </div>
-                </div>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link " href="../index.html">Home</a>
-                        </li>
-
-                        <!-- SBCC Pipeline Link -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://pipeline.sbcc.edu/" target="_blank">
-                                SBCC Pipeline
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="facultyDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Faculty</a>
-                            <ul class="dropdown-menu" aria-labelledby="facultyDropdown">
-                                <li><a class="dropdown-item" href="../Faculty/MikeYoung.html">Mike Young</a></li>
-                                <li><a class="dropdown-item" href="../Faculty/DouglasFolsom.html">Douglas Folsom</a>
-                                </li>
-                                <li><a class="dropdown-item" href="#">Hector Gamero-Jauregui</a></li>
-                                <li><a class="dropdown-item" href="#">Amy Swearngin</a></li>
-                                <li><a class="dropdown-item" href="#">Ron Ferril</a></li>
-                                <li><a class="dropdown-item" href="#">Louise Bretz</a></li>
-                                <li><a class="dropdown-item" href="../Faculty/LynneStark.html">Lynne Stark</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Courses Descriptions</a>
-                            <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-                                <li><a class="dropdown-item"
-                                        href="https://catalog.sbcc.edu/academic-departments/physics/#creditcoursestext">Physics
-                                        Courses</a></li>
-                                <li><a class="dropdown-item"
-                                        href="https://catalog.sbcc.edu/academic-departments/engineering/#creditcoursestext">Engineering
-                                        Courses</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+<header>
+    <div id="block-header-bar" class="header-bar">
+        <a href="/" class="header-link">
+            <span class="header-text">Department of Physics & Engineering</span>
+        </a>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-red shadow-sm py-3 border border-black">
+        <div class="container">
+            <div class="d-flex align-items-center navbar-brand">
+                <img src="../Images/SBCCLogoWhite.png" alt="Logo" class="me-2 navbar-logo" style="height: 80px;">
+                <div class="vr bg-black mx-2"></div>
+                <div class="navbar-brand-text">
+                    <span class="d-block fw-bold text-uppercase brand-small" style="font-size: 20px;">Santa Barbara City
+                        College</span>
+                    <span class="d-block brand-large" style="font-size: 37px;">Physics &amp; Engineering</span>
                 </div>
             </div>
-        </nav>
-    </header>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://pipeline.sbcc.edu/" target="_blank">SBCC Pipeline</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="facultyDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Faculty</a>
+                        <ul class="dropdown-menu" aria-labelledby="facultyDropdown">
+                            <li><a class="dropdown-item" href="../Faculty/MikeYoung.html">Mike Young</a></li>
+                            <li><a class="dropdown-item" href="../Faculty/DouglasFolsom.html">Douglas Folsom</a></li>
+                            <li><a class="dropdown-item" href="#">Hector Gamero-Jauregui</a></li>
+                            <li><a class="dropdown-item" href="#">Amy Swearngin</a></li>
+                            <li><a class="dropdown-item" href="#">Ron Ferril</a></li>
+                            <li><a class="dropdown-item" href="#">Louise Bretz</a></li>
+                            <li><a class="dropdown-item" href="../Faculty/LynneStark.html">Lynne Stark</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Courses Descriptions</a>
+                        <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                            <li><a class="dropdown-item"
+                                    href="https://catalog.sbcc.edu/academic-departments/physics/#creditcoursestext">Physics
+                                    Courses</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://catalog.sbcc.edu/academic-departments/engineering/#creditcoursestext">Engineering
+                                    Courses</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 
     <main>
         <!-- Profile Section -->
@@ -86,12 +76,14 @@
             <div class="container py-5 position-relative">
                 <div class="profile-card d-flex flex-column flex-md-row align-items-center shadow p-4 rounded gap-4">
         
-                    <!-- Image First (on the left) -->
+                    <!-- Profile Image with Fixed Square Frame -->
                     <div class="profile-image text-center">
-                        <img src="../Images/Professor Pictures /LynneStark.png" alt="Lynne Stark" class="rounded shadow-sm profile-img">
+                        <div class="profile-img-frame">
+                            <img src="../Images/Professor Pictures /LynneStark.png" alt="Mike Young" class="img-fluid">
+                        </div>
                     </div>
         
-                    <!-- Text Second (on the right) -->
+                    <!-- Profile Information -->
                     <div class="profile-info text-start">
                         <h1 class="fw-bold mb-3">Lynne Stark</h1>
                         <p class="text-muted fs-5">
@@ -99,7 +91,6 @@
                             Specializes in physics and earth science topics for the non-science major<br>
                             Instructor for PHSC 103.
                         </p>
-                        <!-- Email -->
                         <p class="fs-6">
                             <strong>Email:</strong>
                             <a href="mailto:stark@sbcc.edu" class="text-primary text-decoration-none">
