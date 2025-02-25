@@ -201,8 +201,8 @@ p,
 
 /* Fixed Square Frame for Profile Image */
 .profile-img-frame {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     border: 2px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -668,7 +668,7 @@ a:focus {
 .resources-hero {
     position: relative;
     height: 400px;
-    /* Set a fixed height for consistent display */
+    /* Adjust height as needed */
     overflow: hidden;
 }
 
@@ -684,30 +684,20 @@ a:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    /* Optional: dark tint for contrast */
+    /* Dark tint for contrast */
+    /* Use flex to stretch the container, but let the inner container dictate text position */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-.resources-overlay .title {
+.resources-overlay .container {
+    padding-top: 40px;
+}
+
+.resources-text .title {
     color: #fff;
     font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-/* Responsive adjustments for small screens */
-@media (max-width: 576px) {
-    .resources-overlay {
-        padding: 1rem;
-    }
-
-    .resources-overlay .title {
-        font-size: 1.5rem;
-    }
+    /* Match your other hero titles */
+    margin-bottom: 0.5rem;
 }
