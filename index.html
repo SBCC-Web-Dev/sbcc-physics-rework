@@ -73,8 +73,8 @@
     </header>
 
     <!-- Random Image with Diagonal Line Overlays -->
-    <div id="randomImageContainer" class="random-image-container">
-        <div class="random-image-item">
+    <div id="randomImageContainer" class="random-image-container" style="width: 100%; position: relative; overflow: hidden; background-color: #f8f9fa;">
+        <div class="random-image-item" style="width: 100%; height: 600px; position: relative; overflow: hidden;">
             <!-- Image will be inserted here via JavaScript -->
         </div>
     </div>
@@ -101,12 +101,58 @@
             imgElement.src = selectedImage;
             imgElement.className = 'd-block w-100';
             imgElement.alt = 'Random Physics Image';
+            imgElement.style.width = '100%';
+            imgElement.style.height = '600px';
+            imgElement.style.objectFit = 'cover';
+            imgElement.style.position = 'relative';
+            imgElement.style.display = 'block';
+            
+            // Add the vertical line overlays after the image is added
+            function createOverlays() {
+                // Create before overlay (top-left triangle)
+                const beforeOverlay = document.createElement('div');
+                beforeOverlay.style.content = '';
+                beforeOverlay.style.position = 'absolute';
+                beforeOverlay.style.zIndex = '2';
+                beforeOverlay.style.pointerEvents = 'none';
+                beforeOverlay.style.width = '60%';
+                beforeOverlay.style.height = '60%';
+                beforeOverlay.style.top = '0';
+                beforeOverlay.style.left = '0';
+                beforeOverlay.style.backgroundImage = 'repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0.5) 3px, transparent 3px, transparent 14px), linear-gradient(to bottom, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.08))';
+                beforeOverlay.style.backgroundSize = '17px 17px, 100% 100%';
+                beforeOverlay.style.opacity = '0.15';
+                beforeOverlay.style.mixBlendMode = 'soft-light';
+                beforeOverlay.style.clipPath = 'polygon(0 0, 100% 0, 0 100%)';
+                
+                // Create after overlay (bottom-right triangle)
+                const afterOverlay = document.createElement('div');
+                afterOverlay.style.content = '';
+                afterOverlay.style.position = 'absolute';
+                afterOverlay.style.zIndex = '2';
+                afterOverlay.style.pointerEvents = 'none';
+                afterOverlay.style.width = '60%';
+                afterOverlay.style.height = '60%';
+                afterOverlay.style.bottom = '0';
+                afterOverlay.style.right = '0';
+                afterOverlay.style.backgroundImage = 'repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0.5) 3px, transparent 3px, transparent 14px), linear-gradient(to bottom, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.08))';
+                afterOverlay.style.backgroundSize = '17px 17px, 100% 100%';
+                afterOverlay.style.opacity = '0.15';
+                afterOverlay.style.mixBlendMode = 'soft-light';
+                afterOverlay.style.clipPath = 'polygon(100% 100%, 100% 0, 0 100%)';
+                
+                // Add overlays to container
+                container.appendChild(beforeOverlay);
+                container.appendChild(afterOverlay);
+            }
             
             // Preload the image before showing it
             const tempImg = new Image();
             tempImg.onload = function() {
                 // Add the image to the container
                 container.appendChild(imgElement);
+                // Add the overlays
+                createOverlays();
                 // Fade in the container after image is loaded
                 setTimeout(function() {
                     container.style.transition = 'opacity 0.5s ease';
