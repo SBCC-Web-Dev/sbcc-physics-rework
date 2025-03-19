@@ -234,11 +234,14 @@ p,
     position: absolute;
     z-index: 2;
     pointer-events: none;
-    width: 50%;
-    height: 50%;
-    background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0.8) 2px, transparent 2px, transparent 6px);
-    background-size: 6px 6px;
-    opacity: 0.2;
+    width: 60%;
+    height: 60%;
+    background-image: 
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0.5) 3px, transparent 3px, transparent 14px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.08));
+    background-size: 17px 17px, 100% 100%;
+    opacity: 0.15;
+    mix-blend-mode: soft-light;
 }
 
 .carousel-item::before {
@@ -870,5 +873,75 @@ a:focus {
     .faculty-profile-page .profile-info-container {
         padding-top: 90px;
         text-align: center;
+    }
+}
+
+/* ---------------------------------------------------
+   RANDOM IMAGE CONTAINER (REPLACES CAROUSEL)
+--------------------------------------------------- */
+.random-image-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #f8f9fa; /* Add background color to prevent flashing */
+}
+
+.random-image-item {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    will-change: opacity; /* Optimize for animation */
+}
+
+.random-image-item img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    position: relative;
+    display: block;
+    will-change: transform; /* Optimize for potential transforms */
+}
+
+.random-image-item::before,
+.random-image-item::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    width: 60%;
+    height: 60%;
+    background-image: 
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0.5) 3px, transparent 3px, transparent 14px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.08));
+    background-size: 17px 17px, 100% 100%;
+    opacity: 0.15;
+    mix-blend-mode: soft-light;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.random-image-item::before {
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.random-image-item::after {
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(100% 100%, 100% 0, 0 100%);
+}
+
+@media (max-width: 768px) {
+    .random-image-item,
+    .random-image-item img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .random-image-item,
+    .random-image-item img {
+        height: 300px;
     }
 }
