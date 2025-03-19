@@ -45,11 +45,12 @@
                         <ul class="dropdown-menu" aria-labelledby="facultyDropdown">
                             <li><a class="dropdown-item" href="../Faculty/MikeYoung.html">Mike Young</a></li>
                             <li><a class="dropdown-item" href="../Faculty/DouglasFolsom.html">Douglas Folsom</a></li>
-                            <li><a class="dropdown-item" href="#">Hector Gamero-Jauregui</a></li>
-                            <li><a class="dropdown-item" href="#">Amy Swearngin</a></li>
-                            <li><a class="dropdown-item" href="#">Ron Ferril</a></li>
-                            <li><a class="dropdown-item" href="#">Louise Bretz</a></li>
+                            <li><a class="dropdown-item" href="../Faculty/Hector.html">Hector Gamero-Jauregui</a></li>
+                            <li><a class="dropdown-item" href="../Faculty/Amy.html">Amy Swearngin</a></li>
+                            <li><a class="dropdown-item" href="../Faculty/Ron.html">Ron Ferril</a></li>
+                            <li><a class="dropdown-item" href="../Faculty/Louise.html">Louise Bretz</a></li>
                             <li><a class="dropdown-item" href="../Faculty/LynneStark.html">Lynne Stark</a></li>
+                            <li><a class="dropdown-item" href="../Faculty/JoeSwearngin.html">Joe Swearngin</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -71,44 +72,43 @@
 </header>
 
     <main>
-        <!-- Profile Section -->
-        <section class="mike-young-hero position-relative">
-            <div class="container py-5 position-relative">
-                <div class="profile-card d-flex flex-column flex-md-row align-items-center shadow p-4 rounded gap-4">
-        
-                    <!-- Profile Image with Fixed Square Frame -->
-                    <div class="profile-image text-center">
-                        <div class="profile-img-frame">
-                            <img src="../Images/Professor Pictures /LynneStark.png" alt="Mike Young" class="img-fluid">
-                        </div>
+        <!--PROFILE -->
+        <section class="faculty-profile-page">
+            <div class="container">
+                <!-- Profile Header: Cover Image and Profile Image -->
+                <div class="profile-header">
+                    <div class="cover-image">
+                        <img src="../Images/ProfessorBackgrounds/physbannerbg.jpg" alt="Cover Image">
                     </div>
+                    <!-- Profile Image: LinkedIn-style positioning -->
+                    <div class="profile-img-container">
+                        <img src="../Images/Professor Pictures /LynneStark.png" alt="Lynne Stark" style="transform: scale(1.2); object-fit: cover;">
+                    </div>
+                </div>
         
-                    <!-- Profile Information -->
-                    <div class="profile-info text-start">
-                        <h1 class="fw-bold mb-3">Lynne Stark</h1>
-                        <p class="text-muted fs-5">
-                            Physical Science Proffesor<br>
-                            Specializes in physics and earth science topics for the non-science major<br>
+                <!-- Profile Info Container: Below the profile header -->
+                <div class="profile-info-container">
+                    <div class="profile-details">
+                        <h1 class="profile-name">Lynne Stark</h1>
+                        <p class="profile-role">Physical Science Professor</p>
+                        <p class="profile-description">
+                            Specializes in physics and earth science topics for the non-science major.
                             Instructor for PHSC 103.
                         </p>
-                        <p class="fs-6">
-                            <strong>Email:</strong>
-                            <a href="mailto:stark@sbcc.edu" class="text-primary text-decoration-none">
-                                stark@sbcc.edu
-                            </a>
-                        </p>
+                        <a href="mailto:stark@sbcc.edu"
+                            class="profile-email">stark@sbcc.edu</a>
                     </div>
-        
                 </div>
-            </div>
-        </section>
-
-        <!-- Schedule Section -->
-        <section class="schedule py-5 bg-light">
-            <div class="container">
-                <h2 class="fw-bold text-start mb-4">Spring 2025 Schedule</h2>
-                <div class="schedule-card p-4 shadow rounded">
-                    <img src="../Images/Schedules/Spring 2025/Coursicle - Lynne Stark.png" alt="Mike's Schedule" class="w-100 rounded">
+        
+                <!-- Main Content Section: Schedule & Additional Content -->
+                <div class="profile-main-content">
+                    <div class="schedule">
+                        <h2>Spring 2025 Schedule</h2>
+                        <div class="schedule-card p-4 shadow rounded">
+                            <img src="../Images/Schedules/Spring 2025/Coursicle - Lynne Stark.png" alt="Lynne's Schedule"
+                                class="w-100 rounded">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

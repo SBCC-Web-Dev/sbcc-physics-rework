@@ -45,11 +45,12 @@
                             <ul class="dropdown-menu" aria-labelledby="facultyDropdown">
                                 <li><a class="dropdown-item" href="../Faculty/MikeYoung.html">Mike Young</a></li>
                                 <li><a class="dropdown-item" href="../Faculty/DouglasFolsom.html">Douglas Folsom</a></li>
-                                <li><a class="dropdown-item" href="#">Hector Gamero-Jauregui</a></li>
-                                <li><a class="dropdown-item" href="#">Amy Swearngin</a></li>
-                                <li><a class="dropdown-item" href="#">Ron Ferril</a></li>
-                                <li><a class="dropdown-item" href="#">Louise Bretz</a></li>
+                                <li><a class="dropdown-item" href="../Faculty/Hector.html">Hector Gamero-Jauregui</a></li>
+                                <li><a class="dropdown-item" href="../Faculty/Amy.html">Amy Swearngin</a></li>
+                                <li><a class="dropdown-item" href="../Faculty/Ron.html">Ron Ferril</a></li>
+                                <li><a class="dropdown-item" href="../Faculty/Louise.html">Louise Bretz</a></li>
                                 <li><a class="dropdown-item" href="../Faculty/LynneStark.html">Lynne Stark</a></li>
+                                <li><a class="dropdown-item" href="../Faculty/JoeSwearngin.html">Joe Swearngin</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -71,255 +72,242 @@
     </header>
 
     <main>
-        <!-- Profile Section -->
-        <section class="mike-young-hero position-relative">
-            <div class="container py-5 position-relative">
-                <div class="profile-card d-flex flex-column flex-md-row align-items-center shadow p-4 rounded gap-4">
-        
-                    <!-- Profile Image with Fixed Square Frame -->
-                    <div class="profile-image text-center">
-                        <div class="profile-img-frame">
-                            <img src="../Images/Professor Pictures /mike_young_photo.png" alt="Mike Young" class="img-fluid">
-                        </div>
-                    </div>
-        
-                    <!-- Profile Information -->
-                    <div class="profile-info text-start">
-                        <h1 class="fw-bold mb-3">Mike Young</h1>
-                        <p class="text-muted fs-5">
-                            Department Chair / Professor<br>
-                            Specializes in advanced mechanics and quantum physics (etc.)<br>
-                            Instructor for PHYS 102, PHYS 122, and PHYS 123.
-                        </p>
-                        <p class="fs-6">
-                            <strong>Email:</strong>
-                            <a href="mailto:young@sbcc.edu" class="text-primary text-decoration-none">
-                                young@sbcc.edu
-                            </a>
-                        </p>
-                    </div>
-        
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-        <!-- Schedule Section -->
-        <section class="schedule  py-5 bg-light">
+        <section class="faculty-profile-page">
             <div class="container">
-                <h2 class="fw-bold text-start mb-4">Spring 2025 Schedule</h2>
-                <div class="schedule-card p-4 shadow rounded">
-                    <img src="../Images/Schedules/Spring 2025/Coursicle - Mike Young.png" alt="Mike's Schedule"
-                        class="w-100 rounded">
+                <!-- Profile Header: Cover Image and Profile Image -->
+                <div class="profile-header">
+                    <div class="cover-image">
+                        <img src="../Images/ProfessorBackgrounds/YoungsBG.png" alt="Cover Image">
+                    </div>
+                    <!-- Profile Image: LinkedIn-style positioning -->
+                    <div class="profile-img-container">
+                        <img src="../Images/Professor Pictures /mike_young_photo.png" alt="Mike Young" style="transform: scale(1.5); object-fit: cover;">
+                    </div>
+                </div>
+        
+                <!-- Profile Info Container: Below the profile header -->
+                <div class="profile-info-container">
+                    <div class="profile-details">
+                        <h1 class="profile-name">Mike Young</h1>
+                        <p class="profile-role">Department Chair / Professor</p>
+                        <p class="profile-description">
+                            Specializes in advanced mechanics and quantum physics.
+                            Instructor for PHYS 102, PHYS 122, and PHYS
+                            123.
+                        </p>
+                        <a href="mailto:young@sbcc.edu"
+                            class="profile-email">young@sbcc.edu</a>
+                    </div>
+                </div>
+                
+                <!-- Main Content Section: Schedule & Additional Content -->
+                <div class="profile-main-content">
+                    <div class="schedule">
+                        <h2>Spring 2025 Schedule</h2>
+                        <div class="schedule-card p-4 shadow rounded">
+                            <img src="../Images/Schedules/Spring 2025/Coursicle - Mike Young.png" alt="Mike's Schedule"
+                                class="w-100 rounded">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class Resources Section -->
+                <div class="profile-main-content">
+                    <h2 class="mb-4">Class Resources</h2>
+                    <div class="row class-resources g-4">
+                
+                        <!-- Class Resource Card 1: PHYS 102 -->
+                        <div class="col-md-6">
+                            <div class="card card-trace shadow-sm border-0">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold text-start">
+                                        PHYS 102 - Introductory Physics For Science Majors
+                                    </h5>
+                
+                                    <!-- Resource Buttons -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <!-- Textbook -->
+                                        <a href="#" class="btn-53">
+                                            <div class="original">Textbook</div>
+                                            <div class="letters">
+                                                <span>T</span><span>E</span><span>X</span><span>T</span>
+                                                <span>B</span><span>O</span><span>O</span><span>K</span>
+                                            </div>
+                                        </a>
+                                        <!-- Syllabus -->
+                                        <a href="#" class="btn-53">
+                                            <div class="original">Syllabus</div>
+                                            <div class="letters">
+                                                <span>S</span><span>Y</span><span>L</span><span>L</span>
+                                                <span>A</span><span>B</span><span>U</span><span>S</span>
+                                            </div>
+                                        </a>
+                                        <!-- Past Notes -->
+                                        <a href="#" class="btn-53">
+                                            <div class="original">Past Notes</div>
+                                            <div class="letters">
+                                                <span>P</span><span>A</span><span>S</span><span>T</span>
+                                                <span>N</span><span>O</span><span>T</span><span>E</span><span>S</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                
+                                    <!-- YouTube Embed -->
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/wqA-KQeCoSA?list=PLz005lrvfhuiYL2uLIR1xlR6IWlUweecH"
+                                            title="PHYS 102 YouTube Playlist" allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Class Resource Card 2: PHYS 121 -->
+                        <div class="col-md-6">
+                            <div class="card card-trace shadow-sm border-0">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold text-start">
+                                        PHYS 121 - Mechanics of Solids and Fluids
+                                    </h5>
+                
+                                    <!-- Resource Buttons -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <!-- Textbook -->
+                                        <a href="#" class="btn-53">
+                                            <div class="original">Textbook</div>
+                                            <div class="letters">
+                                                <span>T</span><span>E</span><span>X</span><span>T</span>
+                                                <span>B</span><span>O</span><span>O</span><span>K</span>
+                                            </div>
+                                        </a>
+                                        <!-- Syllabus -->
+                                        <a href="#" class="btn-53">
+                                            <div class="original">Syllabus</div>
+                                            <div class="letters">
+                                                <span>S</span><span>Y</span><span>L</span><span>L</span>
+                                                <span>A</span><span>B</span><span>U</span><span>S</span>
+                                            </div>
+                                        </a>
+                                        <!-- Past Notes -->
+                                        <a href="#" class="btn-53">
+                                            <div class="original">Past Notes</div>
+                                            <div class="letters">
+                                                <span>P</span><span>A</span><span>S</span><span>T</span>
+                                                <span>N</span><span>O</span><span>T</span><span>E</span><span>S</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                
+                                    <!-- YouTube Embed -->
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/oRwJYlYULXo?list=PLpMn6V7JuggHkn1Jlt0104uNPmpnLFl-G"
+                                            title="SBCC Physics YouTube Channel"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Class Resource Card 3: PHYS 122 -->
+                        <div class="col-md-6">
+                            <div class="card card-trace shadow-sm border-0 resourceClick">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold text-start">
+                                        PHYS 122 - Electricity and Magnetism
+                                    </h5>
+                
+                                    <!-- Resource Buttons -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <!-- Textbook -->
+                                        <a href="#" class="btn-53">
+                                            <div class="original">Textbook</div>
+                                            <div class="letters">
+                                                <span>T</span><span>E</span><span>X</span><span>T</span>
+                                                <span>B</span><span>O</span><span>O</span><span>K</span>
+                                            </div>
+                                        </a>
+                                        <!-- Syllabus -->
+                                        <a href="#" class="btn-53">
+                                            <div class="original">Syllabus</div>
+                                            <div class="letters">
+                                                <span>S</span><span>Y</span><span>L</span><span>L</span>
+                                                <span>A</span><span>B</span><span>U</span><span>S</span>
+                                            </div>
+                                        </a>
+                                        <!-- Past Notes -->
+                                        <a href="#" class="btn-53">
+                                            <div class="original">Past Notes</div>
+                                            <div class="letters">
+                                                <span>P</span><span>A</span><span>S</span><span>T</span>
+                                                <span>N</span><span>O</span><span>T</span><span>E</span><span>S</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                
+                                    <!-- YouTube Embed -->
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/nspTcJFqFXw?list=PLpMn6V7JuggHTQfh0aBM5OD4RObeyndsP"
+                                            title="YouTube Playlist"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Class Resource Card 4: PHYS 123 -->
+                        <div class="col-md-6">
+                            <div class="card card-trace shadow-sm border-0">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold text-start">
+                                        PHYS 123 - Heat, Light, and Modern Physics
+                                    </h5>
+                
+                                    <!-- Resource Buttons -->
+                                    <div class="d-flex flex-wrap gap-2 mb-3">
+                                        <!-- Textbook -->
+                                        <a href="#" class="btn-53">
+                                            <div class="original">Textbook</div>
+                                            <div class="letters">
+                                                <span>T</span><span>E</span><span>X</span><span>T</span>
+                                                <span>B</span><span>O</span><span>O</span><span>K</span>
+                                            </div>
+                                        </a>
+                                        <!-- Syllabus -->
+                                        <a href="#" class="btn-53">
+                                            <div class="original">Syllabus</div>
+                                            <div class="letters">
+                                                <span>S</span><span>Y</span><span>L</span><span>L</span>
+                                                <span>A</span><span>B</span><span>U</span><span>S</span>
+                                            </div>
+                                        </a>
+                                        <!-- Past Notes -->
+                                        <a href="#" class="btn-53">
+                                            <div class="original">Past Notes</div>
+                                            <div class="letters">
+                                                <span>P</span><span>A</span><span>S</span><span>T</span>
+                                                <span>N</span><span>O</span><span>T</span><span>E</span><span>S</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                
+                                    <!-- YouTube Embed -->
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/HwUp8Crw6iM?list=PLpMn6V7JuggFnfsb8RMxrwGugD7APF6d9"
+                                            title="PHYS 124 YouTube Playlist" allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
                 </div>
             </div>
         </section>
-
-        <section class="hero class-resources bg-light py-5">
-            <div class="container">
-                <h2 class="fw-bold text-start mb-5 class-resources-header">Class Resources</h2>
-                <div class="row class-resources g-4">
-        
-                    <!-- Class Resource Card 1: PHYS 102 -->
-                    <div class="col-md-6">
-                        <div class="card card-trace shadow-sm border-0">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold text-start">
-                                    PHYS 102 - Introductory Physics For Science Majors
-                                </h5>
-        
-                                <!-- Resource Buttons -->
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <!-- Textbook -->
-                                    <a href="#" class="btn-53">
-                                        <div class="original">Textbook</div>
-                                        <div class="letters">
-                                            <span>T</span><span>E</span><span>X</span><span>T</span>
-                                            <span>B</span><span>O</span><span>O</span><span>K</span>
-                                        </div>
-                                    </a>
-                                    <!-- Syllabus -->
-                                    <a href="#" class="btn-53">
-                                        <div class="original">Syllabus</div>
-                                        <div class="letters">
-                                            <span>S</span><span>Y</span><span>L</span><span>L</span>
-                                            <span>A</span><span>B</span><span>U</span><span>S</span>
-                                        </div>
-                                    </a>
-                                    <!-- Past Notes -->
-                                    <a href="#" class="btn-53">
-                                        <div class="original">Past Notes</div>
-                                        <div class="letters">
-                                            <span>P</span><span>A</span><span>S</span><span>T</span>
-                                            <span>N</span><span>O</span><span>T</span><span>E</span><span>S</span>
-                                        </div>
-                                    </a>
-                                </div>
-        
-                                <!-- YouTube Embed -->
-                                <div class="ratio ratio-16x9">
-                                    <iframe
-                                        src="https://www.youtube.com/embed/wqA-KQeCoSA?list=PLz005lrvfhuiYL2uLIR1xlR6IWlUweecH"
-                                        title="PHYS 102 YouTube Playlist" allowfullscreen>
-                                    </iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Class Resource Card 2: PHYS 121 -->
-                    <div class="col-md-6">
-                        <div class="card card-trace shadow-sm border-0">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold text-start">
-                                    PHYS 121 - Mechanics of Solids and Fluids
-                                </h5>
-        
-                                <!-- Resource Buttons -->
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <!-- Textbook -->
-                                    <a href="#" class="btn-53">
-                                        <div class="original">Textbook</div>
-                                        <div class="letters">
-                                            <span>T</span><span>E</span><span>X</span><span>T</span>
-                                            <span>B</span><span>O</span><span>O</span><span>K</span>
-                                        </div>
-                                    </a>
-                                    <!-- Syllabus -->
-                                    <a href="#" class="btn-53">
-                                        <div class="original">Syllabus</div>
-                                        <div class="letters">
-                                            <span>S</span><span>Y</span><span>L</span><span>L</span>
-                                            <span>A</span><span>B</span><span>U</span><span>S</span>
-                                        </div>
-                                    </a>
-                                    <!-- Past Notes -->
-                                    <a href="#" class="btn-53">
-                                        <div class="original">Past Notes</div>
-                                        <div class="letters">
-                                            <span>P</span><span>A</span><span>S</span><span>T</span>
-                                            <span>N</span><span>O</span><span>T</span><span>E</span><span>S</span>
-                                        </div>
-                                    </a>
-                                </div>
-        
-                                <!-- YouTube Embed -->
-                                <div class="ratio ratio-16x9">
-                                    <iframe
-                                        src="https://www.youtube.com/embed/oRwJYlYULXo?list=PLpMn6V7JuggHkn1Jlt0104uNPmpnLFl-G"
-                                        title="SBCC Physics YouTube Channel"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen>
-                                    </iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Class Resource Card 3: PHYS 122 -->
-                    <div class="col-md-6">
-                        <div class="card card-trace shadow-sm border-0 resourceClick">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold text-start">
-                                    PHYS 122 - Electricity and Magnetism
-                                </h5>
-        
-                                <!-- Resource Buttons -->
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <!-- Textbook -->
-                                    <a href="#" class="btn-53">
-                                        <div class="original">Textbook</div>
-                                        <div class="letters">
-                                            <span>T</span><span>E</span><span>X</span><span>T</span>
-                                            <span>B</span><span>O</span><span>O</span><span>K</span>
-                                        </div>
-                                    </a>
-                                    <!-- Syllabus -->
-                                    <a href="#" class="btn-53">
-                                        <div class="original">Syllabus</div>
-                                        <div class="letters">
-                                            <span>S</span><span>Y</span><span>L</span><span>L</span>
-                                            <span>A</span><span>B</span><span>U</span><span>S</span>
-                                        </div>
-                                    </a>
-                                    <!-- Past Notes -->
-                                    <a href="#" class="btn-53">
-                                        <div class="original">Past Notes</div>
-                                        <div class="letters">
-                                            <span>P</span><span>A</span><span>S</span><span>T</span>
-                                            <span>N</span><span>O</span><span>T</span><span>E</span><span>S</span>
-                                        </div>
-                                    </a>
-                                </div>
-        
-                                <!-- YouTube Embed -->
-                                <div class="ratio ratio-16x9">
-                                    <iframe
-                                        src="https://www.youtube.com/embed/nspTcJFqFXw?list=PLpMn6V7JuggHTQfh0aBM5OD4RObeyndsP"
-                                        title="YouTube Playlist"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen>
-                                    </iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Class Resource Card 4: PHYS 123 -->
-                    <div class="col-md-6">
-                        <div class="card card-trace shadow-sm border-0">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold text-start">
-                                    PHYS 123 - Heat, Light, and Modern Physics
-                                </h5>
-        
-                                <!-- Resource Buttons -->
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <!-- Textbook -->
-                                    <a href="#" class="btn-53">
-                                        <div class="original">Textbook</div>
-                                        <div class="letters">
-                                            <span>T</span><span>E</span><span>X</span><span>T</span>
-                                            <span>B</span><span>O</span><span>O</span><span>K</span>
-                                        </div>
-                                    </a>
-                                    <!-- Syllabus -->
-                                    <a href="#" class="btn-53">
-                                        <div class="original">Syllabus</div>
-                                        <div class="letters">
-                                            <span>S</span><span>Y</span><span>L</span><span>L</span>
-                                            <span>A</span><span>B</span><span>U</span><span>S</span>
-                                        </div>
-                                    </a>
-                                    <!-- Past Notes -->
-                                    <a href="#" class="btn-53">
-                                        <div class="original">Past Notes</div>
-                                        <div class="letters">
-                                            <span>P</span><span>A</span><span>S</span><span>T</span>
-                                            <span>N</span><span>O</span><span>T</span><span>E</span><span>S</span>
-                                        </div>
-                                    </a>
-                                </div>
-        
-                                <!-- YouTube Embed -->
-                                <div class="ratio ratio-16x9">
-                                    <iframe
-                                        src="https://www.youtube.com/embed/HwUp8Crw6iM?list=PLpMn6V7JuggFnfsb8RMxrwGugD7APF6d9"
-                                        title="PHYS 124 YouTube Playlist" allowfullscreen>
-                                    </iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                </div>
-            </div>
-        </section>
-
-
     </main>
 
     <section class="footer" style="background-color: #991c2d;">
